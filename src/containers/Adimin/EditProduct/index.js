@@ -54,7 +54,7 @@ function EditProduct() {
     productDataFormData.append('offer', data.offer)
 
     await toast.promise(
-      api.post(`products/${product.id}`, productDataFormData),
+      api.put(`products/${product.id}`, productDataFormData),
       {
         pending: 'Editando novo produto...',
         success: 'Produto editado com sucesso',
